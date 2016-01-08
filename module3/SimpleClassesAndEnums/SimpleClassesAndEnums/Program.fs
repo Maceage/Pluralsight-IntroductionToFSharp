@@ -28,7 +28,16 @@ type Car(color: string, wheelCount: int) =
     member x.Move() = printfn "The %s car (%A) is moving" color carType
     member x.CarType = carType
 
-    member x.PassengerCount with get() = passengerCount and set v = passengerCount <- v
+    abstract PassengerCount: int with get, set
+    default x.PassengerCount with get() = passengerCount and set v = passengerCount <- v
+
+type Red18Wheeler() =
+    inherit Car("Red", 18)
+
+    override x.PassengerCount
+        with set v =
+            if v > 2 then failwith "only two passengers allowed"
+                else base.PassengerCount <- 2
 
 let car = Car()
 car.Move()
@@ -42,3 +51,12 @@ printfn "Car has %d passengers on board" car.PassengerCount
 
 car.PassengerCount <- 2
 printfn "Car has %d passengers on board" car.PassengerCount
+
+let truck = Red18Wheeler()
+truck.PassengerCount <- 1
+truck.PassengerCount <- 3
+
+let truckObject = truck :> obj
+let truckCar = truck :> Car
+
+let truckObjectBackToCar = truckObject :?> Car
