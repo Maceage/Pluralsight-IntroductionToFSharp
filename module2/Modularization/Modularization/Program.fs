@@ -1,4 +1,4 @@
-﻿module Sturm.Demo.Calculator.Program
+﻿module Mace.Demo.Calculator.Program
 
 [<EntryPoint>]
 let main args =

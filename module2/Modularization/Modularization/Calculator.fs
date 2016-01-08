@@ -1,4 +1,4 @@
-﻿namespace Sturm.Demo.Calculator
+﻿namespace Mace.Demo.Calculator
 
 module Adder =
     let square x = x * x
