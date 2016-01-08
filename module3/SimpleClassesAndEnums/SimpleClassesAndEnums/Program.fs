@@ -21,12 +21,24 @@ type Car(color: string, wheelCount: int) =
         | x when x % 2 = 1 -> CarType.WeirdContraption
         | _ -> CarType.CrazyHugeMythicalMonster
 
+    let mutable passengerCount = 0
+
     new() = Car("red", 4)
 
     member x.Move() = printfn "The %s car (%A) is moving" color carType
+    member x.CarType = carType
+
+    member x.PassengerCount with get() = passengerCount and set v = passengerCount <- v
 
 let car = Car()
 car.Move()
 
 let greenCar = Car("green", 3)
 greenCar.Move()
+
+printfn "Green car has type %A" greenCar.CarType
+
+printfn "Car has %d passengers on board" car.PassengerCount
+
+car.PassengerCount <- 2
+printfn "Car has %d passengers on board" car.PassengerCount
