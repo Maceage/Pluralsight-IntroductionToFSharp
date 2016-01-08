@@ -7,6 +7,10 @@ Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "SpeakersFS", "SpeakersFS\Sp
 EndProject
 Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "SpeakersFS.Tests", "SpeakersFS.Tests\SpeakersFS.Tests.fsproj", "{7C200BA9-7739-4890-91DC-A71548A9A083}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ButterworthWeb", "ButterworthWeb\ButterworthWeb.csproj", "{CFAB5D3B-13B5-4608-A040-028760DA215A}"
+EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "ButterworthWebApp", "ButterworthWebApp\ButterworthWebApp.fsproj", "{A126575F-C66E-42BF-A70F-655D4C3F0069}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{7C200BA9-7739-4890-91DC-A71548A9A083}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7C200BA9-7739-4890-91DC-A71548A9A083}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7C200BA9-7739-4890-91DC-A71548A9A083}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CFAB5D3B-13B5-4608-A040-028760DA215A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CFAB5D3B-13B5-4608-A040-028760DA215A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CFAB5D3B-13B5-4608-A040-028760DA215A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CFAB5D3B-13B5-4608-A040-028760DA215A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A126575F-C66E-42BF-A70F-655D4C3F0069}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A126575F-C66E-42BF-A70F-655D4C3F0069}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A126575F-C66E-42BF-A70F-655D4C3F0069}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A126575F-C66E-42BF-A70F-655D4C3F0069}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

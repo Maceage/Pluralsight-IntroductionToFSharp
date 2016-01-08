@@ -1,0 +1,52 @@
+﻿@using ButterworthWebApp.Models
+@model CrossoverCalculationRequest
+           
+
+<h2>Crossover Calculation</h2>
+
+<script src="@Url.Content("~/Scripts/jquery.validate.min.js")" type="text/javascript"></script>
+<script src="@Url.Content("~/Scripts/jquery.validate.unobtrusive.min.js")" type="text/javascript"></script>
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+    <fieldset>
+        <legend>Calculation Parameters</legend>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.CrossoverType)
+        </div>
+        <div class="editor-field">
+            @Html.DropDownListFor(model => model.CrossoverType, new SelectList(Enum.GetValues(typeof(CrossoverType))))
+            @Html.ValidationMessageFor(model => model.CrossoverType)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.ButterworthOrder)
+        </div>
+        <div class="editor-field">
+            @Html.DropDownListFor(model => model.ButterworthOrder, new SelectList(Enum.GetValues(typeof(ButterworthOrder))))
+            @Html.ValidationMessageFor(model => model.ButterworthOrder)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.CrossoverFrequency)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.CrossoverFrequency)
+            @Html.ValidationMessageFor(model => model.CrossoverFrequency)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Impedance)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Impedance)
+            @Html.ValidationMessageFor(model => model.Impedance)
+        </div>
+
+        <p>
+            <input type="submit" value="Calculate" />
+        </p>
+    </fieldset>
+}
+

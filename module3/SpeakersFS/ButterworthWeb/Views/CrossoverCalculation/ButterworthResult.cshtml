@@ -1,0 +1,39 @@
+﻿@model ButterworthWebApp.Models.ButterworthCalculationResult
+
+<h2>Butterworth Calculation Results</h2>
+
+<fieldset>
+    <legend>Calculation Parameters</legend>
+
+    <div class="display-field">
+        Crossover type: @Html.DisplayFor(model => model.CrossoverType)
+    </div>
+
+    <div class="display-field">
+        Butterworth order: @Html.DisplayFor(model => model.ButterworthOrder)
+    </div>
+
+    <div class="display-field">
+        Crossover frequency: @Html.DisplayFor(model => model.CrossoverFrequency)
+    </div>
+
+    <div class="display-field">
+        Impedance: @Html.DisplayFor(model => model.Impedance)
+    </div>
+</fieldset>
+
+<fieldset>
+    <legend>Results</legend>
+
+    <div class="display-field">
+        Capacitance: @Html.DisplayFor(model => model.Capacitance)
+    </div>
+
+    <div class="display-field">
+        Inductance: @Html.DisplayFor(model => model.Inductance)
+    </div>
+</fieldset>
+
+<p>
+    @Html.ActionLink("Perform another calculation", "Index")
+</p>
